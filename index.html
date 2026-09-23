@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>Rock <span>Paper</span> Scissors</h1>
+            <div class="mode-selector">
+                <button id="vs-cpu" class="mode-btn active">Vs Computer</button>
+                <button id="vs-player" class="mode-btn">2 Player</button>
+            </div>
+        </header>
+
+        <!-- Score Board -->
+        <div class="score-board">
+            <div class="score" id="player1-score-box">
+                <span id="p1-name">Player 1</span>
+                <badge id="score-p1">0</badge>
+            </div>
+            <div class="score" id="player2-score-box">
+                <span id="p2-name">Computer</span>
+                <badge id="score-p2">0</badge>
+            </div>
+        </div>
+
+        <!-- Battle Arena (Animations) -->
+        <div class="battle-arena">
+            <div class="fighter player-side">
+                <div class="hand-icon" id="p1-hand"><i class="fa-solid fa-hand-rock"></i></div>
+                <p id="p1-label">Player 1</p>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="fighter computer-side">
+                <div class="hand-icon" id="p2-hand"><i class="fa-solid fa-hand-rock"></i></div>
+                <p id="p2-label">Computer</p>
+            </div>
+        </div>
+
+        <!-- Result Status Text -->
+        <div class="result-display">
+            <h2 id="result-text">Choose your weapon!</h2>
+        </div>
+
+        <!-- Selection Controls -->
+        <div class="controls" id="game-controls">
+            <button class="choice-btn" data-choice="rock"><i class="fa-solid fa-hand-rock"></i></button>
+            <button class="choice-btn" data-choice="paper"><i class="fa-solid fa-hand-paper"></i></button>
+            <button class="choice-btn" data-choice="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+        </div>
+
+        <!-- Reset Button -->
+        <button id="reset-btn"><i class="fa-solid fa-rotate-right"></i> Reset Scores</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
